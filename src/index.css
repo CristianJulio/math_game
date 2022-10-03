@@ -1,0 +1,47 @@
+:root {
+  --clr-white: #fff;
+  --clr-orange: #ec6c3d;
+  --clr-blue: #324f9f;
+  --clr-text: #606060;
+
+  --fs-64: 3.333vw;
+  --fs-56: 2.916vw;
+  --fs-48: 2.5vw;
+  --fs-40: 2.083vw;
+  --fs-16: 0.833vw;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--fs-16);
+}
+
+@keyframes blink {
+  from {
+    background: var(--clr-orange);
+    color: var(--clr-white);
+  }
+
+  to {
+    background: var(--clr-blue);
+    color: var(--clr-blue);
+  }
+}
+
+@keyframes move {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
