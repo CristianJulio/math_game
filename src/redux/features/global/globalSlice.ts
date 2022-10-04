@@ -39,6 +39,9 @@ const globalSlice = createSlice({
     },
     setIsCorrect: (state, { payload }: PayloadAction<boolean | null>) => {
       state.isCorrect = payload
+    },
+    reset: (state) => {
+      state.count = initialState.count
     }
   }
 })
@@ -49,5 +52,5 @@ export const getData = (store: RootState) => store.global.data
 export const getCount = (store: RootState) => store.global.count
 export const getIsCorrect = (store: RootState) => store.global.isCorrect
 
-export const { setIsStarted, setOperation, setData, setCorrects, setIncorrects, setIsCorrect } = globalSlice.actions
+export const { setIsStarted, setOperation, setData, setCorrects, setIncorrects, setIsCorrect, reset } = globalSlice.actions
 export default globalSlice.reducer
